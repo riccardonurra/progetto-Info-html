@@ -1,37 +1,88 @@
-body{
-    background-color: lightgray;
-    padding-top: 10px;
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-bottom: 10px;
-    
+body {
+    background: linear-gradient(135deg, #e0e7ff 0%, #f8fafc 100%);
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-.img_primario{
-    border: 1px solid black;
+header {
+    background: #4f46e5;
+    color: #fff;
+    padding: 32px 0 16px 0;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.titolo {
+    font-size: 2.5rem;
+    margin: 0;
+    letter-spacing: 2px;
+    font-weight: bold;
+    border: none;
+    padding: 0;
+    background: none;
+}
+
+main {
+    flex: 1;
+    max-width: 700px;
+    margin: 32px auto 0 auto;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    padding: 32px 32px 24px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img_primario {
+    border-radius: 12px;
+    border: none;
+    width: 90%;
+    max-width: 400px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+
+.img_secondario {
+    border-radius: 12px;
     width: 100%;
+    max-width: 600px;
     height: auto;
-    max-height: 300px;
+    margin: 16px 0;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
 }
 
-.img_secondario{
-    border: 1px solid black;
-    width: 70%;
-    height: auto;
-    max-height: 200px;
-}
-.content{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 15px;
-    margin-right: 15px;
-    border: 2px solid black;
-    padding: 10px;
-    text-align: left;
-    color: #333;
+.content {
+    margin: 16px 0;
+    border: none;
+    padding: 0 0 16px 0;
+    text-align: center;
+    color: #222;
+    font-size: 1.1rem;
 }
 
-.paragrafi{
+.link {
+    display: inline-block;
+    margin: 12px 0 24px 0;
+    color: #4f46e5;
+    background: #e0e7ff;
+    padding: 8px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2s, color 0.2s;
+}
+.link:hover {
+    background: #6366f1;
+    color: #fff;
+}
+
+.paragrafi {
     margin-top: 5px;
     margin-bottom: 20px;
     margin-right: 15px;
@@ -43,37 +94,16 @@ body{
     color: #333;
 }
 
-
-.titolo{
-    
-    color: black;
-    font-size: 20px;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: normal;
-    padding-top: 3px;
-    padding-left: 1.5px;
-    padding-right: 1.5px;
-    padding-bottom: 3px;
-    border: 1px solid black;
-    padding: 15px;
-    text-align: center;
-}
-
-.titolo_secondario{
-    color: black;
-    font-size: 16px;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: normal;
-    padding-top: 2px;
-    padding-left: 1px;
-    padding-right: 1px;
-    padding-bottom: 2px;
-    
-    padding: 5px;
+.titolo_secondario {
+    color: #4f46e5;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 24px 0 8px 0;
     text-align: left;
+    width: 100%;
 }
 
-.sottotitolo{
+.sottotitolo {
     color: black;
     font-size: 14px;
     margin-left: 8px;
@@ -83,28 +113,120 @@ body{
     padding-bottom: 2px;
 }
 
-.titolo_footer{
-    color: black;
-    font-size: 12px;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: normal;
+/* Team grid for Chi Siamo */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    margin-top: 12px;
+}
+.member {
+    background: #fff;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 6px 18px rgba(15,23,42,0.06);
     text-align: center;
-    margin-top: 1px;
-    margin-bottom: 1px;
+}
+.avatar {
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+    background: linear-gradient(135deg,#c7d2fe,#a78bfa);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin: 0 auto 12px auto;
+}
+.member h3 {
+    margin: 6px 0 8px 0;
+    font-size: 1.05rem;
 }
 
-.content_footer{
-    padding: 0%;
-    margin-top: 1px;
-    margin-bottom: 1px;
-    margin-left: 15px;
-    margin-right: 15px;
-    font-size: 7px;
-    text-align: left;
-    color: #333;
+@media (max-width: 900px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 600px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+    .member {
+        padding: 12px;
+    }
 }
 
-.mete_viaggi{
-    
+footer {
+    background: #312e81;
+    color: #fff;
+    padding: 32px 0 16px 0;
+    text-align: center;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    margin-top: 48px;
 }
+
+.footer {
+    font-size: 1rem;
+    margin-bottom: 12px;
+}
+
+.titolo_footer {
+    font-size: 1.2rem;
+    margin: 12px 0 8px 0;
+    font-weight: 600;
+}
+
+.content_footer {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px 0;
+    font-size: 1rem;
+    color: #e0e7ff;
+    text-align: center;
+}
+.content_footer li {
+    margin: 4px 0;
+}
+
+.link_footer {
+    display: inline-block;
+    margin-top: 10px;
+    color: #a5b4fc;
+    background: #4338ca;
+    padding: 8px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2s, color 0.2s;
+}
+.link_footer:hover {
+    background: #fff;
+    color: #312e81;
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 16px 4vw 16px 4vw;
+    }
+    .img_primario {
+        width: 100%;
+        max-width: 100%;
+    }
+    .titolo {
+        font-size: 1.5rem;
+    }
+    .titolo_secondario {
+        font-size: 1.1rem;
+    }
+    .titolo_footer {
+        font-size: 1rem;
+    }
+}
+
+
 
