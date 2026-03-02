@@ -1,14 +1,39 @@
 <!DOCTYPE html>
-<html lang = 'en'>
+<html lang="it">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styleprog.css">
-    <title class="title">Lavora con noi - Progetto Informatica</title>
+    <title>Lavora con noi - Progetto Informatica</title>
 </head>
 <body>
-    <h1 class="titolo_secondario">Lavora con noi</h1>
-    <p class="paragrafi">sei interessato a lavorare con noi? compila il modulo allegato e invia il tuo curriculum vitae all'indirizzo email: <a href="mailto:humanresources@progettoinformatica.it">humanresources@progettoinformatica.it</a></p>
-    <img src="C:\Users\ricca\Desktop\4°q\informatica\HTML\progetto informatica\immagini\lavora con noi.jpg" alt="Lavora con noi" class="img_secondario">
-    <a href="C:\Users\ricca\Desktop\4°q\arte\Manierismo_260116_091834.pdf" class="link">Scarica il modulo</a>
+    <header class="site-header">
+        <nav class="main-nav">
+            <a href="indexprog.html">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn" aria-haspopup="true" aria-expanded="false">METE ▾</button>
+                <ul class="dropdown-content" aria-label="Elenco mete">
+                    <li><a href="roma.html"><img src="immagini/flags/Flag_of_Italy.svg.webp" class="flag" alt="Italia">Roma</a></li>
+                    <li><a href="parigi.html"><img src="immagini/flags/france.png" class="flag" alt="Francia">Parigi</a></li>
+                    <li><a href="newyork.html"><img src="immagini/flags/us.png" class="flag" alt="USA">New York</a></li>
+                    <li><a href="tokyo.html"><img src="immagini/flags/japan.png" class="flag" alt="Giappone">Tokyo</a></li>
+                    <li><a href="wellington.html"><img src="immagini/flags/new_zealand.png" class="flag" alt="Nuova Zelanda">Wellington</a></li>
+                </ul>
+            </div>
+            <a href="chi-siamo.html">Chi Siamo</a>
+            <a href="lavora-con-noi.html" aria-current="page">Lavora con noi</a>
+        </nav>
+        <h1 class="titolo">Lavora con noi</h1>
+    </header>
+
+    <main class="container">
+        <p class="paragrafi">Sei interessato a lavorare con noi? Invia il tuo curriculum vitae a <a href="mailto:humanresources@progettoinformatica.it">humanresources@progettoinformatica.it</a></p>
+        <img src="immagini/lavora-con-noi.jpg" alt="Lavora con noi" class="img_secondario">
+        <p><a href="#" class="link">Scarica il modulo</a> (sostituisci con il percorso del modulo se disponibile)</p>
+    </main>
+
+    <footer class="site-footer">
+        <p>Contatti: info@progettoinformatica.it</p>
+    </footer>
+</body>
 </html>

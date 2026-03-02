@@ -1,20 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styleprog.css">
-    <title class="title">Chi Siamo - Progetto Informatica</title>
-</html>
+    <title>Chi Siamo - Progetto Informatica</title>
+</head>
 <body>
-    <h1 class="titolo">la nostra squadra</h1>
-    <p class="paragrafi">Questo è il paragrafo dedicato alla sezione "Chi Siamo" del progetto di informatica.</p>
-    <h2 class="sottotitolo">la nostra storia</h2>
-    <div class="la_nostra_storia">
-        <img src="C:\Users\ricca\Desktop\4°q\informatica\HTML\progetto informatica\immagini\operatore1.jpg" alt="operatore1" class="">
-        <p class="class_operatore">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-    </div>
-    <h3 class="sottotitolo"> la nostra squadra</h3>
-    <p class="paragrafi">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <header class="site-header">
+        <nav class="main-nav">
+            <a href="indexprog.html">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn" aria-haspopup="true" aria-expanded="false">METE ▾</button>
+                <ul class="dropdown-content" aria-label="Elenco mete">
+                    <li><a href="roma.html"><img src="immagini/flags/Flag_of_Italy.svg.webp" class="flag" alt="Italia">Roma</a></li>
+                    <li><a href="parigi.html"><img src="immagini/flags/france.png" class="flag" alt="Francia">Parigi</a></li>
+                    <li><a href="newyork.html"><img src="immagini/flags/us.png" class="flag" alt="USA">New York</a></li>
+                    <li><a href="tokyo.html"><img src="immagini/flags/japan.png" class="flag" alt="Giappone">Tokyo</a></li>
+                    <li><a href="wellington.html"><img src="immagini/flags/new_zealand.png" class="flag" alt="Nuova Zelanda">Wellington</a></li>
+                </ul>
+            </div>
+            <a href="chi-siamo.html" aria-current="page">Chi Siamo</a>
+            <a href="lavora-con-noi.html">Lavora con noi</a>
+        </nav>
+        <h1 class="titolo">La nostra squadra</h1>
+    </header>
+
+    <main class="container">
+        <p class="paragrafi">Questo è il paragrafo dedicato alla sezione "Chi Siamo" del progetto di informatica.</p>
+
+        <section>
+            <h2 class="sottotitolo">La nostra storia</h2>
+            <div class="la_nostra_storia">
+                <img src="immagini/operatore1.jpg" alt="Operatore" class="img_operatore">
+                <p class="class_operatore">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+        </section>
+
+        <section>
+            <h3 class="sottotitolo">La nostra squadra</h3>
+            <p class="paragrafi">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Copyright © 2024 Progetto Informatica. Tutti i diritti riservati.</p>
+        <p>Contatti: info@progettoinformatica.it</p>
+    </footer>
 </body>
 </html>

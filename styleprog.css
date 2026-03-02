@@ -1,141 +1,148 @@
+/* Theme variables and reset */
+:root{
+    --bg:#f7f6f4;
+    --card:#ffffff;
+    --text:#222222;
+    --muted:#666666;
+    --accent:#ff6a00; /* primary orange */
+    --accent-dark:#e65500;
+    --max-width:1100px;
+}
+
+/* Smooth scroll for in-page navigation */
+html{scroll-behavior:smooth}
+
+*{box-sizing:border-box;margin:0;padding:0}
 body{
-    margin: 0;
-    min-height: 35%;
-    display: flex;
-    flex-direction: column;
-    background-color: lightgray;
-    padding-top: 10px;
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-bottom: 10px;
-    
+    font-family: Inter, -apple-system, system-ui, 'Helvetica Neue', Arial;
+    background:var(--bg);
+    color:var(--text);
+    display:flex;
+    flex-direction:column;
+    min-height:100vh;
 }
 
-.img_primario{
-    border: 1px solid black;
-    width: 100%;
-    height: auto;
-    max-height: 300px;
+.container{
+    width:100%;
+    max-width:var(--max-width);
+    margin:22px auto;
+    padding:20px;
+    background:var(--card);
+    border-radius:10px;
+    box-shadow:0 6px 18px rgba(17,17,17,0.06);
 }
 
-.img_secondario{
-    border: 1px solid black;
-    width: 70%;
-    height: auto;
-    max-height: 200px;
-}
-.content{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 15px;
-    margin-right: 15px;
-    border: 2px solid black;
-    padding: 10px;
-    text-align: left;
-    color: #333;
-}
+/* Hero */
+.hero{width:100%;height:420px;background-image:url('immagini/homepage_photo_1.png');background-size:cover;background-position:center;border-radius:8px;margin:18px auto;position:relative;overflow:hidden}
+.hero::after{display:none}
+.hero-inner{position:relative;z-index:2;max-width:var(--max-width);margin:0 auto;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;color:#000;padding:48px 24px 24px;text-align:center}
+.hero-title{font-size:38px;margin:0 0 8px;font-weight:800;text-shadow:0 6px 14px rgba(0,0,0,0.45)}
+.hero-sub{font-size:18px;margin:0 0 16px;opacity:0.95;color:#000;text-shadow:0 4px 10px rgba(0,0,0,0.35)}
+.hero-ctas{display:flex;gap:12px}
+.hero .btn{background:#fff;color:var(--accent-dark);padding:10px 16px;border-radius:8px;font-weight:700}
+.hero .btn:hover{background:#ffe9db}
+.hero .link{color:#fff;border:1px solid rgba(255,255,255,0.18);padding:8px 12px;border-radius:8px}
 
-.paragrafi{
-    margin-top: 5px;
-    margin-bottom: 20px;
-    margin-right: 15px;
-    padding-top: 1px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 1px;
-    text-align: left;
-    color: #333;
-}
+/* Adjust container spacing when hero present */
+.container{margin-top:8px}
 
+/* Header and nav */
+.site-header{background:linear-gradient(90deg, rgba(255,106,0,0.06), rgba(255,106,0,0.02)); padding:18px 0; border-bottom:1px solid rgba(0,0,0,0.06); position:relative}
+.main-nav{display:flex; gap:14px; justify-content:center; align-items:center; margin-bottom:10px}
+.main-nav a{color:var(--accent-dark); text-decoration:none; font-weight:600; padding:8px 12px; border-radius:6px}
+.main-nav a:hover{background:rgba(255,106,0,0.12)}
+.main-nav a[aria-current="page"]{background:var(--accent); color:white}
 
-.titolo{
-    
-    color: black;
-    font-size: 20px;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: normal;
-    padding-top: 3px;
-    padding-left: 1.5px;
-    padding-right: 1.5px;
-    padding-bottom: 3px;
-    border: 1px solid black;
-    padding: 15px;
-    text-align: center;
+/* Dropdown (Mete) */
+.dropdown{position:absolute; left:14px; top:12px; z-index:50}
+.dropbtn{background:transparent;border:none;color:var(--accent-dark);font-weight:700;cursor:pointer;padding:8px 12px;border-radius:6px}
+.dropbtn:focus{outline:2px solid rgba(255,106,0,0.18)}
+.dropdown-content{position:absolute;top:100%;left:0;display:none;min-width:220px;background:var(--card);border-radius:8px;box-shadow:0 8px 24px rgba(17,17,17,0.08);padding:6px;border:1px solid rgba(0,0,0,0.04);z-index:40;transform-origin:top;transition:opacity .12s ease, transform .12s ease;opacity:0;transform:translateY(-6px)}
+.dropdown-content li{list-style:none;margin:0}
+.dropdown-content li a{display:flex;align-items:center;gap:10px;padding:8px 10px;color:var(--text);text-decoration:none;border-radius:6px}
+.dropdown-content li a:hover{background:rgba(255,106,0,0.06);color:var(--accent-dark)}
+.dropdown:hover .dropdown-content,.dropdown:focus-within .dropdown-content{display:block;opacity:1;transform:translateY(0)}
+
+/* make flags inside dropdown slightly larger */
+.dropdown .flag{width:22px}
+
+@media (max-width:560px){
+    .main-nav{justify-content:flex-start;gap:8px;padding:6px}
+    .dropdown-content{position:static;box-shadow:none;padding:0;border-radius:6px}
 }
 
-.titolo_secondario{
-    color: black;
-    font-size: 16px;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: normal;
-    padding-top: 2px;
-    padding-left: 1px;
-    padding-right: 1px;
-    padding-bottom: 2px;
-    
-    padding: 5px;
-    text-align: left;
+.titolo{font-size:30px; text-align:center; color:var(--text); margin:6px 0}
+
+/* Images */
+.img_primario{width:100%; height:auto; max-height:420px; object-fit:cover; border-radius:8px}
+.img_secondario{width:100%; height:auto; object-fit:cover; border-radius:6px}
+.img_operatore{width:100%; max-width:320px; height:auto; border-radius:6px; border:1px solid rgba(0,0,0,0.06)}
+
+/* Content */
+.content, .paragrafi{margin:16px 0; color:var(--muted); line-height:1.6}
+.content{padding:14px; border:1px solid rgba(0,0,0,0.04); background:linear-gradient(180deg,#fff,#fafafa); border-radius:8px}
+
+.titolo_secondario{font-family: 'Georgia', 'Times New Roman', serif; font-size:26px; margin-top:12px; color:var(--text); text-transform:capitalize; letter-spacing:1px; font-weight:700; text-align:center; position:relative; padding-bottom:18px}
+.titolo_secondario::after{content:"";position:absolute;left:50%;transform:translateX(-50%);bottom:6px;width:96px;height:6px;background:linear-gradient(90deg,var(--accent),var(--accent-dark));border-radius:4px;box-shadow:0 6px 16px rgba(230,90,20,0.14)}
+
+/* Proposte: cards artistiche */
+.proposte-grid{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;margin-top:18px}
+.proposta-card{background:linear-gradient(180deg,rgba(255,255,255,0.98),rgba(255,250,245,0.98));border-radius:12px;padding:18px;box-shadow:0 10px 24px rgba(18,18,18,0.06);width:280px;min-height:140px;display:flex;flex-direction:column;justify-content:flex-start;align-items:flex-start;transition:transform .22s ease,box-shadow .22s ease;text-decoration:none;color:inherit}
+.proposta-card:hover{transform:translateY(-6px);box-shadow:0 18px 34px rgba(18,18,18,0.12);text-decoration:none}
+.proposta-card h4{font-size:16px;margin:0 0 8px 0;color:var(--accent-dark);font-weight:700}
+.proposta-card p{margin:0;color:var(--muted);line-height:1.4}
+
+@media (max-width:700px){
+    .proposte-grid{flex-direction:column;align-items:stretch}
+    .proposta-card{width:100%}
 }
+.date-grid{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px;justify-content:flex-start}
+.date-card{background:linear-gradient(180deg,#fff,#fff);border-radius:10px;padding:14px;width:260px;box-shadow:0 8px 20px rgba(17,17,17,0.06);border:1px solid rgba(0,0,0,0.04)}
+.date-card h4{font-size:15px;margin:0 0 6px 0;color:var(--accent-dark)}
+.date-card .price{font-weight:800;color:var(--accent);margin-bottom:8px}
+.date-card .meta{font-size:13px;color:var(--muted);line-height:1.4}
+.date-card .nights{display:inline-block;margin-top:8px;background:rgba(230,90,20,0.08);color:var(--accent-dark);padding:6px 8px;border-radius:8px;font-weight:700;font-size:13px}
 
-.sottotitolo{
-    color: black;
-    font-size: 14px;
-    margin-left: 8px;
-    padding-top: 2px;
-    padding-left: 1px;
-    padding-right: 1px;
-    padding-bottom: 2px;
+@media (max-width:700px){
+    .date-card{width:100%}
 }
+.sottotitolo{font-family: 'Georgia', 'Times New Roman', serif; font-size:18px; margin:12px auto; color:var(--muted); font-style:italic; letter-spacing:0.6px; max-width:82%; text-align:center; padding:8px 18px; border-radius:10px; background:linear-gradient(180deg, rgba(255,255,255,0.98), rgba(255,250,245,0.99)); box-shadow:0 6px 14px rgba(17,17,17,0.04)}
+.sottotitolo::before,.sottotitolo::after{content:"";display:inline-block;width:40px;height:2px;background:linear-gradient(90deg,var(--accent),var(--accent-dark));vertical-align:middle;margin:0 10px;border-radius:2px;opacity:0.9}
+.class_operatore{font-size:15px; color:var(--text)}
 
-.titolo_footer{
-    place-content: bottom;
-    color: black;
-    font-size: 12px;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: normal;
-    text-align: left;
-    margin-top: 1px;
-    margin-bottom: 1px;
-}
+/* Destinations as cards */
+.mete_viaggi ul{list-style:none; padding:0; margin:0}
+.mete_viaggi .grid-top{display:grid; grid-template-columns:repeat(3, 1fr); gap:18px; padding:0; margin:0}
+.mete_viaggi .grid-bottom{display:flex; gap:18px; justify-content:center; padding:0; margin:18px 0 0 0}
+.mete_viaggi li{display:flex; flex-direction:column; gap:8px; background:linear-gradient(180deg,#fff,#fff); border-radius:10px; overflow:hidden; box-shadow:0 6px 14px rgba(17,17,17,0.04); border:1px solid rgba(0,0,0,0.03); padding:0; list-style:none}
+.mete_viaggi .img_secondario{width:100%; height:180px; object-fit:cover}
+.mete_viaggi .mete_viaggio{display:flex; flex-direction:column; gap:0; padding:0; font-size:18px; color:var(--text); text-decoration:none}
+.mete_viaggi .mete_viaggio:hover .city-name{color:var(--accent-dark)}
+.city-name{font-size:18px; font-weight:600; color:var(--text)}
+.meta-row{display:flex; align-items:center; gap:10px; padding:12px 14px}
+.flag{width:28px; height:auto; display:inline-block; border-radius:4px; box-shadow:0 1px 3px rgba(0,0,0,0.06)}
+.mete_viaggi li:hover{transform:translateY(-4px); transition:transform .18s ease}
 
-.content_footer{
-    place-content: bottom;
-    padding: 0%;
-    margin-top: 1px;
-    margin-bottom: 1px;
-    margin-left: 15px;
-    margin-right: 15px;
-    font-size: 9px;
-    text-align: left;
-    color: #333;
-}
+/* Buttons and links */
+.link, .link_footer{color:var(--accent); text-decoration:none; font-weight:600}
+.btn{display:inline-block; background:var(--accent); color:#fff; padding:10px 14px; border-radius:8px; text-decoration:none}
+.btn:hover{background:var(--accent-dark)}
 
-.mete_viaggio{
-    font-size: 30px;
-    margin: 1px;
-    padding: 2px;
-    color: #333;
-    text-align: left;
-}
+/* Footer */
+.site-footer{background:linear-gradient(90deg, rgba(255,106,0,0.04), rgba(0,0,0,0.02)); padding:18px; margin-top:18px; border-top:4px solid var(--accent); border-radius:0 0 10px 10px}
+.titolo_footer{font-size:13px; color:var(--muted)}
+.content_footer{font-size:13px; color:var(--muted)}
 
-.class_operatore{
-    font-size: 15px;
-    margin: 1px;
-    padding: 2px;
-    color: black;
-    text-align: left;
-}
+/* Utility */
+.flex{display:flex; gap:12px; align-items:center}
 
-.img_operatore{
-    border: 1px solid black;
-    width: 70%;
-    height: auto;
-    max-height: 150px;
-}
-
-.contenitore_footer{
-    padding: 10px;
-    border-left: 4px solid pink;
-    border-radius: 5px;
-
+@media (max-width:800px){
+    .container{margin:12px 14px; padding:14px}
+    .titolo{font-size:22px}
+    .img_primario{max-height:240px}
+    .mete_viaggi .img_secondario{height:120px}
+    .hero{height:220px}
+    .hero-title{font-size:22px}
+    .hero-sub{font-size:14px}
+    .hero-inner{justify-content:flex-start;padding:20px}
 }
