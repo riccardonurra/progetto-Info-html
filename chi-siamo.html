@@ -22,6 +22,24 @@
             </div>
             <a href="chi-siamo.html" aria-current="page">Chi Siamo</a>
             <a href="lavora-con-noi.html">Lavora con noi</a>
+            <input type="checkbox" id="login-toggle" class="login-toggle" />
+            <input type="checkbox" id="logged-toggle" class="logged-toggle" />
+            <label for="login-toggle" class="login-btn" aria-haspopup="true" aria-expanded="false">Accedi ▾</label>
+            <div class="login-panel" role="dialog" aria-label="Login">
+                <form class="login-form" action="#" method="post">
+                    <label>Email
+                        <input type="email" name="email" required placeholder="tuo@esempio.it">
+                    </label>
+                    <label>Password
+                        <input type="password" name="password" required placeholder="********">
+                    </label>
+                    <div class="login-actions">
+                        <label for="logged-toggle" class="btn">Accedi</label>
+                        <a class="btn" href="registrati.html">Registrati</a>
+                    </div>
+                </form>
+            </div>
+            <div class="user-badge" aria-hidden="true">Accesso effettuato · <label for="logged-toggle" class="link">Esci</label></div>
         </nav>
         <h1 class="titolo">La nostra squadra</h1>
     </header>

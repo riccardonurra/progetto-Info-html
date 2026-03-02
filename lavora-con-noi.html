@@ -23,6 +23,22 @@
             <a href="chi-siamo.html">Chi Siamo</a>
             <a href="lavora-con-noi.html" aria-current="page">Lavora con noi</a>
         </nav>
+            <input type="checkbox" id="login-toggle" class="login-toggle" />
+            <label for="login-toggle" class="login-btn" aria-haspopup="true" aria-expanded="false">Accedi ▾</label>
+            <div class="login-panel" role="dialog" aria-label="Login">
+                <form class="login-form" action="#" method="post">
+                    <label>Email
+                        <input type="email" name="email" required placeholder="tuo@esempio.it">
+                    </label>
+                    <label>Password
+                        <input type="password" name="password" required placeholder="********">
+                    </label>
+                    <div class="login-actions">
+                        <button class="btn" type="submit">Accedi</button>
+                        <a class="btn" href="registrati.html">Registrati</a>
+                    </div>
+                </form>
+            </div>
         <h1 class="titolo">Lavora con noi</h1>
     </header>
 

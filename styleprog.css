@@ -63,6 +63,28 @@ body{
 .dropdown-content li a:hover{background:rgba(255,106,0,0.06);color:var(--accent-dark)}
 .dropdown:hover .dropdown-content,.dropdown:focus-within .dropdown-content{display:block;opacity:1;transform:translateY(0)}
 
+/* Login (CSS-only toggle) */
+.login-toggle{display:none}
+.logged-toggle{display:none}
+.login-btn{position:absolute;right:14px;top:12px;background:transparent;border:none;color:var(--accent-dark);font-weight:700;cursor:pointer;padding:8px 12px;border-radius:6px}
+.login-btn:focus{outline:2px solid rgba(255,106,0,0.18)}
+.login-panel{position:absolute;top:48px;right:14px;display:none;min-width:300px;background:var(--card);border-radius:8px;box-shadow:0 10px 30px rgba(17,17,17,0.12);padding:12px;border:1px solid rgba(0,0,0,0.04);z-index:60}
+.login-toggle:checked + .logged-toggle + .login-btn + .login-panel{display:block}
+.logged-toggle:checked ~ .login-panel{display:none}
+.logged-toggle:checked ~ .login-btn{display:none}
+.logged-toggle:checked ~ .user-badge{display:flex}
+.user-badge{display:none;position:absolute;top:12px;right:14px;align-items:center;gap:10px;color:var(--accent-dark);font-weight:700}
+.login-form label{display:block;font-size:13px;color:var(--muted);margin:8px 0}
+.login-form input{width:100%;padding:8px;border:1px solid rgba(0,0,0,0.06);border-radius:6px;margin-top:6px}
+.login-actions{display:flex;gap:8px;justify-content:space-between;align-items:center;margin-top:10px}
+.login-actions .btn{padding:8px 10px}
+.login-actions .link{font-size:13px;color:var(--accent-dark);text-decoration:none}
+
+@media (max-width:560px){
+    .login-btn{right:8px;top:8px;padding:6px 10px}
+    .login-panel{right:8px;left:8px;min-width:unset}
+}
+
 /* make flags inside dropdown slightly larger */
 .dropdown .flag{width:22px}
 
@@ -96,16 +118,19 @@ body{
     .proposte-grid{flex-direction:column;align-items:stretch}
     .proposta-card{width:100%}
 }
-.date-grid{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px;justify-content:flex-start}
-.date-card{background:linear-gradient(180deg,#fff,#fff);border-radius:10px;padding:14px;width:260px;box-shadow:0 8px 20px rgba(17,17,17,0.06);border:1px solid rgba(0,0,0,0.04)}
+.date-grid{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px;justify-content:flex-start;align-items:stretch}
+.date-card{background:linear-gradient(180deg,#fff,#fff);border-radius:10px;padding:14px;width:260px;box-shadow:0 8px 20px rgba(17,17,17,0.06);border:1px solid rgba(0,0,0,0.04);display:flex;flex-direction:column;justify-content:space-between;min-height:220px}
 .date-card h4{font-size:15px;margin:0 0 6px 0;color:var(--accent-dark)}
 .date-card .price{font-weight:800;color:var(--accent);margin-bottom:8px}
 .date-card .meta{font-size:13px;color:var(--muted);line-height:1.4}
 .date-card .nights{display:inline-block;margin-top:8px;background:rgba(230,90,20,0.08);color:var(--accent-dark);padding:6px 8px;border-radius:8px;font-weight:700;font-size:13px}
 
 @media (max-width:700px){
-    .date-card{width:100%}
+    .date-card{width:100%;min-height:auto}
 }
+
+.date-card .option{margin-top:8px;font-size:14px;color:var(--text);font-weight:600}
+.date-card .option small{font-weight:400;color:var(--muted);font-size:13px}
 .sottotitolo{font-family: 'Georgia', 'Times New Roman', serif; font-size:18px; margin:12px auto; color:var(--muted); font-style:italic; letter-spacing:0.6px; max-width:82%; text-align:center; padding:8px 18px; border-radius:10px; background:linear-gradient(180deg, rgba(255,255,255,0.98), rgba(255,250,245,0.99)); box-shadow:0 6px 14px rgba(17,17,17,0.04)}
 .sottotitolo::before,.sottotitolo::after{content:"";display:inline-block;width:40px;height:2px;background:linear-gradient(90deg,var(--accent),var(--accent-dark));vertical-align:middle;margin:0 10px;border-radius:2px;opacity:0.9}
 .class_operatore{font-size:15px; color:var(--text)}

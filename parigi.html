@@ -23,6 +23,25 @@
 			<a href="chi-siamo.html">Chi Siamo</a>
 			<a href="lavora-con-noi.html">Lavora con noi</a>
 		</nav>
+
+		<input type="checkbox" id="login-toggle" class="login-toggle" />
+		<input type="checkbox" id="logged-toggle" class="logged-toggle" />
+		<label for="login-toggle" class="login-btn" aria-haspopup="true" aria-expanded="false">Accedi ▾</label>
+		<div class="login-panel" role="dialog" aria-label="Login">
+			<form class="login-form" action="#" method="post">
+				<label>Email
+					<input type="email" name="email" required placeholder="tuo@esempio.it">
+				</label>
+				<label>Password
+					<input type="password" name="password" required placeholder="********">
+				</label>
+				<div class="login-actions">
+					<label for="logged-toggle" class="btn">Accedi</label>
+					<a class="btn" href="registrati.html">Registrati</a>
+				</div>
+			</form>
+		</div>
+		<div class="user-badge" aria-hidden="true">Accesso effettuato · <label for="logged-toggle" class="link">Esci</label></div>
 		<h1 class="titolo">Parigi</h1>
 		<p class="sottotitolo">La città dell'arte e dell'amore</p>
 	</header>
@@ -47,23 +66,6 @@
 		</section>
 
 
-		<section class="contenitore">
-			<h3 class="titolo_secondario">Date disponibili</h3>
-			<div class="date-grid">
-				<article class="date-card">
-					<h4>20-24 Maggio 2026</h4>
-					<p class="price">€429</p>
-					<p class="meta">Volo compreso · Tarda primavera, clima mite · Mercati e eventi floreali</p>
-					<div class="nights">4 notti</div>
-				</article>
-				<article class="date-card">
-					<h4>05-09 Settembre 2026</h4>
-					<p class="price">€459</p>
-					<p class="meta">Volo compreso · Fine estate, clima gradevole · Mostre e settimane culturali</p>
-					<div class="nights">4 notti</div>
-				</article>
-			</div>
-		</section>
 
 		<section class="contenitore">
 			<h4 class="titolo_secondario">Le nostre strutture</h4>
@@ -74,6 +76,28 @@
 			<div class="hotel">
 				<h3>Hôtel Plaza Athénée</h3>
 				<p>Iconico, lusso e charme nella zona della Torre Eiffel.</p>
+			</div>
+		</section>
+
+		<section class="contenitore">
+			<h3 class="titolo_secondario">Date disponibili</h3>
+			<div class="date-grid">
+				<article class="date-card">
+					<h4>20-24 Maggio 2026</h4>
+					<p class="price">€429</p>
+					<p class="meta">Volo compreso · Tarda primavera, clima mite · Mercati e eventi floreali</p>
+					<div class="option">Hôtel Le Meurice: €529 <small>(camera doppia, colazione inclusa)</small></div>
+					<div class="option">Hôtel Plaza Athénée: €579 <small>(camera doppia, colazione inclusa)</small></div>
+					<div class="nights">4 notti</div>
+				</article>
+				<article class="date-card">
+					<h4>05-09 Settembre 2026</h4>
+					<p class="price">€459</p>
+					<p class="meta">Volo compreso · Fine estate, clima gradevole · Mostre e settimane culturali</p>
+					<div class="option">Hôtel Le Meurice: €579 <small>(camera doppia, colazione inclusa)</small></div>
+					<div class="option">Hôtel Plaza Athénée: €629 <small>(camera doppia, colazione inclusa)</small></div>
+					<div class="nights">4 notti</div>
+				</article>
 			</div>
 		</section>
 

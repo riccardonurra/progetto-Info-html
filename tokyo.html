@@ -23,6 +23,25 @@
 			<a href="chi-siamo.html">Chi Siamo</a>
 			<a href="lavora-con-noi.html">Lavora con noi</a>
 		</nav>
+
+		<input type="checkbox" id="login-toggle" class="login-toggle" />
+		<input type="checkbox" id="logged-toggle" class="logged-toggle" />
+		<label for="login-toggle" class="login-btn" aria-haspopup="true" aria-expanded="false">Accedi ▾</label>
+		<div class="login-panel" role="dialog" aria-label="Login">
+			<form class="login-form" action="#" method="post">
+				<label>Email
+					<input type="email" name="email" required placeholder="tuo@esempio.it">
+				</label>
+				<label>Password
+					<input type="password" name="password" required placeholder="********">
+				</label>
+				<div class="login-actions">
+					<label for="logged-toggle" class="btn">Accedi</label>
+					<a class="btn" href="registrati.html">Registrati</a>
+				</div>
+			</form>
+		</div>
+		<div class="user-badge" aria-hidden="true">Accesso effettuato · <label for="logged-toggle" class="link">Esci</label></div>
 		<h1 class="titolo">Tokyo</h1>
 		<p class="sottotitolo">Tradizione e futuro in un unico luogo</p>
 	</header>
@@ -46,23 +65,6 @@
 			</div>
 		</section>
 
-		<section class="contenitore">
-			<h3 class="titolo_secondario">Date disponibili</h3>
-			<div class="date-grid">
-				<article class="date-card">
-					<h4>12-18 Luglio 2026</h4>
-					<p class="price">€1.399</p>
-					<p class="meta">Volo compreso · Estate calda e umida · Festival estivi serali</p>
-					<div class="nights">6 notti</div>
-				</article>
-				<article class="date-card">
-					<h4>20-27 Settembre 2026</h4>
-					<p class="price">€1.299</p>
-					<p class="meta">Volo compreso · Inizio autunno, clima mite · Foglie autunnali e atmosfere tranquille</p>
-					<div class="nights">7 notti</div>
-				</article>
-			</div>
-		</section>
 
 		<section class="contenitore">
 			<h4 class="titolo_secondario">Le nostre strutture</h4>
@@ -73,6 +75,28 @@
 			<div class="hotel">
 				<h3>Hotel Ryokan tradizionale</h3>
 				<p>Soggiorno in struttura tradizionale per un'esperienza autentica.</p>
+			</div>
+		</section>
+
+		<section class="contenitore">
+			<h3 class="titolo_secondario">Date disponibili</h3>
+			<div class="date-grid">
+				<article class="date-card">
+					<h4>12-18 Luglio 2026</h4>
+					<p class="price">€1.399</p>
+					<p class="meta">Volo compreso · Estate calda e umida · Festival estivi serali</p>
+					<div class="option">Park Hyatt Tokyo: €1.899 <small>(camera doppia, breakfast incluso)</small></div>
+					<div class="option">Hotel Ryokan: €1.499 <small>(sistemazione tradizionale, pasti locali inclusi)</small></div>
+					<div class="nights">6 notti</div>
+				</article>
+				<article class="date-card">
+					<h4>20-27 Settembre 2026</h4>
+					<p class="price">€1.299</p>
+					<p class="meta">Volo compreso · Inizio autunno, clima mite · Foglie autunnali e atmosfere tranquille</p>
+					<div class="option">Park Hyatt Tokyo: €1.699 <small>(camera doppia, breakfast incluso)</small></div>
+					<div class="option">Hotel Ryokan: €1.299 <small>(sistemazione tradizionale, pasti locali inclusi)</small></div>
+					<div class="nights">7 notti</div>
+				</article>
 			</div>
 		</section>
 

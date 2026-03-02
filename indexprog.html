@@ -23,6 +23,25 @@
             <a href="chi-siamo.html">Chi Siamo</a>
             <a href="lavora-con-noi.html">Lavora con noi</a>
         </nav>
+
+        <input type="checkbox" id="login-toggle" class="login-toggle" />
+        <input type="checkbox" id="logged-toggle" class="logged-toggle" />
+        <label for="login-toggle" class="login-btn" aria-haspopup="true" aria-expanded="false">Accedi ▾</label>
+        <div class="login-panel" role="dialog" aria-label="Login">
+            <form class="login-form" action="#" method="post">
+                <label>Email
+                    <input type="email" name="email" required placeholder="tuo@esempio.it">
+                </label>
+                <label>Password
+                    <input type="password" name="password" required placeholder="********">
+                </label>
+                <div class="login-actions">
+                    <label for="logged-toggle" class="btn">Accedi</label>
+                    <a class="btn" href="registrati.html">Registrati</a>
+                </div>
+            </form>
+        </div>
+        <div class="user-badge" aria-hidden="true">Accesso effettuato · <label for="logged-toggle" class="link">Esci</label></div>
         <h1 class="titolo">Agenzia Viaggi</h1>
     </header>
 
@@ -32,7 +51,7 @@
             <p class="hero-sub">Scopri mete iconiche e offerte curate per te..</p>
             <div class="hero-ctas">
                 <a href="#mete" class="btn">Scopri le mete</a>
-                <a href="chi-siamo.html" class="btn">Chi siamo</a>
+                <a href="#proposte" class="btn">Le nostre proposte</a>
             </div>
         </div>
     </div>
@@ -94,10 +113,8 @@
             </div>
         </section>
 
-        <a href="chi-siamo.html" class="link">Chi Siamo</a>
-
         <h2 class="titolo_secondario">Le nostre proposte:</h2>
-        <section class="contenitore proposte home-proposte">
+        <section id="proposte" class="contenitore proposte home-proposte">
             <div class="proposte-grid">
                 <a href="roma.html" class="proposta-card">
                     <h4 class="sotto_titolo_contenuto">Passeggiate classiche - Roma</h4>
