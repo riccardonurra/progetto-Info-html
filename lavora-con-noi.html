@@ -22,33 +22,74 @@
             </div>
             <a href="chi-siamo.html">Chi Siamo</a>
             <a href="lavora-con-noi.html" aria-current="page">Lavora con noi</a>
-        </nav>
+            
             <input type="checkbox" id="login-toggle" class="login-toggle" />
-            <label for="login-toggle" class="login-btn" aria-haspopup="true" aria-expanded="false">Accedi ▾</label>
-            <div class="login-panel" role="dialog" aria-label="Login">
-                <form class="login-form" action="#" method="post">
-                    <label>Email
-                        <input type="email" name="email" required placeholder="tuo@esempio.it">
-                    </label>
-                    <label>Password
-                        <input type="password" name="password" required placeholder="********">
-                    </label>
+            <input type="checkbox" id="logged-toggle" class="logged-toggle" />
+            <label for="login-toggle" class="login-btn">Accedi ▾</label>
+            <div class="login-panel">
+                <form class="login-form">
+                    <label>Email <input type="email" required placeholder="tuo@esempio.it"></label>
+                    <label>Password <input type="password" required placeholder="********"></label>
                     <div class="login-actions">
-                        <button class="btn" type="submit">Accedi</button>
-                        <a class="btn" href="registrati.html">Registrati</a>
+                        <label for="logged-toggle" class="btn">Accedi</label>
+                        <a class="link" href="registrati.html">Registrati</a>
                     </div>
                 </form>
             </div>
-        <h1 class="titolo">Lavora con noi</h1>
+            <div class="user-badge">Accesso effettuato · <label for="logged-toggle" class="link">Esci</label></div>
+        </nav>
     </header>
 
     <main class="container">
-        <p class="paragrafi">Sei interessato a lavorare con noi? Invia il tuo curriculum vitae a <a href="mailto:humanresources@progettoinformatica.it">humanresources@progettoinformatica.it</a></p>
-        <img src="immagini/lavora-con-noi.jpg" alt="Lavora con noi" class="img_secondario">
-        <p><a href="#" class="link">Scarica il modulo</a> (sostituisci con il percorso del modulo se disponibile)</p>
+        <h1 class="titolo_secondario">Unisciti al Team</h1>
+        <p class="sottotitolo">Aiutaci a costruire il futuro del travel tech.</p>
+
+        <section>
+            <h2 class="titolo">Posizioni Aperte</h2>
+            <div class="proposte-grid">
+                <div class="proposta-card">
+                    <h4>Web Developer</h4>
+                    <p>Sviluppo frontend e gestione database per la nostra piattaforma di booking.</p>
+                </div>
+                <div class="proposta-card">
+                    <h4>Social Media Manager</h4>
+                    <p>Creazione contenuti e gestione della community per le nostre mete turistiche.</p>
+                </div>
+                <div class="proposta-card">
+                    <h4>Customer Specialist</h4>
+                    <p>Supporto diretto ai viaggiatori e gestione delle prenotazioni internazionali.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content" style="margin-top: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">
+            <h2 class="titolo" style="margin-bottom: 20px;">Invia la tua candidatura</h2>
+            <form action="#" method="post" class="login-form">
+                <label>Nome Completo
+                    <input type="text" name="nome" required placeholder="Mario Rossi">
+                </label>
+                <label>Email
+                    <input type="email" name="email" required placeholder="mario.rossi@esempio.it">
+                </label>
+                <label>Posizione di interesse
+                    <select name="posizione" style="width: 100%; padding: 8px; border: 1px solid rgba(0,0,0,0.06); border-radius: 6px; margin-top: 6px;">
+                        <option value="dev">Web Developer</option>
+                        <option value="social">Social Media Manager</option>
+                        <option value="customer">Customer Specialist</option>
+                    </select>
+                </label>
+                <label>Messaggio di presentazione
+                    <textarea name="messaggio" rows="4" style="width: 100%; padding: 8px; border: 1px solid rgba(0,0,0,0.06); border-radius: 6px; margin-top: 6px; font-family: inherit;"></textarea>
+                </label>
+                <div style="margin-top: 20px; text-align: center;">
+                    <button type="submit" class="btn" style="border: none; cursor: pointer; width: 100%;">Invia Candidatura</button>
+                </div>
+            </form>
+        </section>
     </main>
 
     <footer class="site-footer">
+        <p>Copyright © 2024 Progetto Informatica. Tutti i diritti riservati.</p>
         <p>Contatti: info@progettoinformatica.it</p>
     </footer>
 </body>

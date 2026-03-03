@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleprog.css">
+    <title>Registrati - Progetto Informatica</title>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="main-nav">
+            <a href="indexprog.html">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">METE ▾</button>
+                <ul class="dropdown-content">
+                    <li><a href="roma.html">Roma</a></li>
+                    <li><a href="parigi.html">Parigi</a></li>
+                    <li><a href="newyork.html">New York</a></li>
+                    <li><a href="tokyo.html">Tokyo</a></li>
+                    <li><a href="wellington.html">Wellington</a></li>
+                </ul>
+            </div>
+            <a href="chi-siamo.html">Chi Siamo</a>
+            <a href="lavora-con-noi.html">Lavora con noi</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1 class="titolo_secondario">Crea un Account</h1>
+        <p class="sottotitolo">Unisciti alla nostra community di viaggiatori.</p>
+
+        <section class="content" style="max-width: 500px; margin: 40px auto;">
+            <form action="indexprog.html" class="login-form" style="display: block; opacity: 1; position: relative;">
+                <div style="margin-bottom: 15px;">
+                    <label style="display:block; margin-bottom:5px; font-weight:bold;">Nome Completo</label>
+                    <input type="text" placeholder="es. Mario Rossi" required style="width:100%; padding:10px; border-radius:8px; border:1px solid #ddd;">
+                </div>
+
+                <div style="margin-bottom: 15px;">
+                    <label style="display:block; margin-bottom:5px; font-weight:bold;">Email</label>
+                    <input type="email" placeholder="esempio@mail.it" required style="width:100%; padding:10px; border-radius:8px; border:1px solid #ddd;">
+                </div>
+
+                <div style="margin-bottom: 15px;">
+                    <label style="display:block; margin-bottom:5px; font-weight:bold;">Password</label>
+                    <input type="password" placeholder="********" required style="width:100%; padding:10px; border-radius:8px; border:1px solid #ddd;">
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <label style="font-size: 14px; color: var(--muted);">
+                        <input type="checkbox" required> Accetto i termini e le condizioni
+                    </label>
+                </div>
+
+                <button type="submit" class="btn" style="width: 100%; border: none; cursor: pointer; font-size: 16px;">
+                    Registrati Ora
+                </button>
+
+                <p style="text-align: center; margin-top: 20px; font-size: 14px;">
+                    Hai già un account? <a href="indexprog.html" class="link">Accedi qui</a>
+                </p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Copyright © 2024 Progetto Informatica. Tutti i diritti riservati.</p>
+    </footer>
+</body>
+</html>

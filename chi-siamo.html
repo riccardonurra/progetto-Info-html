@@ -5,6 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styleprog.css">
     <title>Chi Siamo - Progetto Informatica</title>
+    <style>
+        /* Aggiunta di un piccolo fix locale per l'allineamento della storia */
+        .la_nostra_storia {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            margin-top: 30px;
+        }
+        @media (max-width: 768px) {
+            .la_nostra_storia {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 <body>
     <header class="site-header">
@@ -22,48 +37,71 @@
             </div>
             <a href="chi-siamo.html" aria-current="page">Chi Siamo</a>
             <a href="lavora-con-noi.html">Lavora con noi</a>
+            
             <input type="checkbox" id="login-toggle" class="login-toggle" />
             <input type="checkbox" id="logged-toggle" class="logged-toggle" />
-            <label for="login-toggle" class="login-btn" aria-haspopup="true" aria-expanded="false">Accedi ▾</label>
-            <div class="login-panel" role="dialog" aria-label="Login">
-                <form class="login-form" action="#" method="post">
-                    <label>Email
-                        <input type="email" name="email" required placeholder="tuo@esempio.it">
-                    </label>
-                    <label>Password
-                        <input type="password" name="password" required placeholder="********">
-                    </label>
+            <label for="login-toggle" class="login-btn">Accedi ▾</label>
+            
+            <div class="login-panel">
+                <form class="login-form">
+                    <label>Email <input type="email" required placeholder="tuo@esempio.it"></label>
+                    <label>Password <input type="password" required placeholder="********"></label>
                     <div class="login-actions">
                         <label for="logged-toggle" class="btn">Accedi</label>
-                        <a class="btn" href="registrati.html">Registrati</a>
+                        <a class="link" href="registrati.html">Registrati</a>
                     </div>
                 </form>
             </div>
-            <div class="user-badge" aria-hidden="true">Accesso effettuato · <label for="logged-toggle" class="link">Esci</label></div>
+            <div class="user-badge">Accesso effettuato · <label for="logged-toggle" class="link">Esci</label></div>
         </nav>
-        <h1 class="titolo">La nostra squadra</h1>
     </header>
 
     <main class="container">
-        <p class="paragrafi">Questo è il paragrafo dedicato alla sezione "Chi Siamo" del progetto di informatica.</p>
+        <h1 class="titolo_secondario">Chi Siamo</h1>
+        <p class="sottotitolo">Passione per il viaggio, dedizione per l'informatica.</p>
 
-        <section>
-            <h2 class="sottotitolo">La nostra storia</h2>
+        <section class="content">
             <div class="la_nostra_storia">
-                <img src="immagini/operatore1.jpg" alt="Operatore" class="img_operatore">
-                <p class="class_operatore">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <img src="immagini/operatore1.jpg" alt="Il nostro ufficio" class="img_operatore">
+                <div>
+                    <h2 style="color: var(--accent-dark); margin-bottom: 10px;">La nostra storia</h2>
+                    <p class="class_operatore">
+                        Nati come un piccolo progetto scolastico, ci siamo evoluti in una piattaforma dedicata all'esplorazione del mondo. 
+                        Crediamo che la tecnologia debba essere al servizio dell'esperienza umana, rendendo la pianificazione di un viaggio 
+                        semplice, intuitiva e sicura.
+                    </p>
+                    <br>
+                    <p class="class_operatore">
+                        Oggi gestiamo rotte verso 5 capitali mondiali, garantendo assistenza continua e contenuti sempre aggiornati.
+                    </p>
+                </div>
             </div>
         </section>
 
-        <section>
-            <h3 class="sottotitolo">La nostra squadra</h3>
-            <p class="paragrafi">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <section style="margin-top: 40px;">
+            <h2 class="titolo_secondario">I Fondatori</h2>
+            <div class="proposte-grid">
+                <div class="proposta-card">
+                    <h4>Mario Rossi</h4>
+                    <p>Fondatore & CEO. Esperto di logistica internazionale e appassionato di montagna.</p>
+                </div>
+                <div class="proposta-card">
+                    <h4>Luca Bianchi</h4>
+                    <p>Lead Developer. Colui che trasforma le idee in codice e pixel.</p>
+                </div>
+                <div class="proposta-card">
+                    <h4>Giulia Verdi</h4>
+                    <p>Responsabile Mete. Viaggiatrice instancabile con la valigia sempre pronta.</p>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer class="site-footer">
-        <p>Copyright © 2024 Progetto Informatica. Tutti i diritti riservati.</p>
-        <p>Contatti: info@progettoinformatica.it</p>
+        <div style="text-align: center;">
+            <p>Copyright © 2024 <strong>Progetto Informatica</strong>. Tutti i diritti riservati.</p>
+            <p>Contatti: <a href="mailto:info@progettoinformatica.it" class="link_footer">info@progettoinformatica.it</a></p>
+        </div>
     </footer>
 </body>
 </html>
