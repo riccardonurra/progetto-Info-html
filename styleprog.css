@@ -1,11 +1,3 @@
-.img-secondario--wellington {
-    height: 180px !important;
-    width: 100% !important;
-    object-fit: cover !important;
-    aspect-ratio: 16/9;
-    display: block;
-}
-
 :root{
     --bg:#f7f6f4;
     --card:#ffffff;
@@ -116,7 +108,7 @@ body{
 .mete_viaggi .grid-top{display:grid; grid-template-columns:repeat(3, 1fr); gap:18px; padding:0; margin:0}
 .mete_viaggi .grid-bottom{display:flex; gap:18px; justify-content:center; padding:0; margin:18px 0 0 0}
 .mete_viaggi li{display:flex; flex-direction:column; gap:8px; background:linear-gradient(180deg,#fff,#fff); border-radius:10px; overflow:hidden; box-shadow:0 6px 14px rgba(17,17,17,0.04); border:1px solid rgba(0,0,0,0.03); padding:0; list-style:none}
-.mete_viaggi .img_secondario{width:100%; height:180px; object-fit:cover}
+.mete_viaggi .img_secondario{width:100%; height:180px; object-fit:cover; aspect-ratio:16/9; border-radius:6px;}
 .mete_viaggi .mete_viaggio{display:flex; flex-direction:column; gap:0; padding:0; font-size:18px; color:var(--text); text-decoration:none}
 .mete_viaggi .mete_viaggio:hover .city-name{color:var(--accent-dark)}
 .city-name{font-size:18px; font-weight:600; color:var(--text)}
@@ -148,7 +140,7 @@ body{
     .container{margin:12px 14px; padding:14px}
     .titolo{font-size:22px}
     .img_primario{max-height:240px}
-    .mete_viaggi .img_secondario{height:120px}
+    .mete_viaggi .img_secondario{height:120px; aspect-ratio:16/9;}
     .hero{height:220px}
     .hero-title{font-size:22px}
     .hero-sub{font-size:14px}
@@ -170,7 +162,7 @@ body{
     .proposte-grid,.date-grid{flex-direction:column;align-items:stretch}
     .proposta-card,.date-card{width:100%;min-height:auto}
     .mete_viaggi .grid-top{grid-template-columns:1fr}
-    .mete_viaggi .img_secondario{height:auto}
+    .mete_viaggi .img_secondario{height:auto; aspect-ratio:16/9;}
     .sottotitolo{font-size:16px;padding:6px 12px;max-width:90%}
 }
 
