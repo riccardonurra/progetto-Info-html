@@ -149,7 +149,7 @@ body{
 }
 
 
-/* extra responsive tweaks for small viewports */
+
 @media (max-width:480px){
     .main-nav{flex-direction:column;align-items:stretch;gap:0;padding:0}
     .main-nav a{padding:10px 12px;text-align:center;width:100%}

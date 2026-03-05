@@ -1,4 +1,4 @@
-/* Layout generale */
+
 body {
     margin: 0;
     min-height: 35%;
@@ -7,7 +7,7 @@ body {
     font-family: 'Times New Roman', Times, serif;
 }
 
-/* Titoli */
+
 .titolo {
     color: green;
     font-size: clamp(20px, 3vw, 30px);
@@ -23,7 +23,7 @@ body {
     text-align: center;
 }
 
-/* Contenuti */
+
 .contenuto {
     margin: 10px 0;
     padding: 10px;
@@ -49,7 +49,7 @@ body {
     padding: 10px;
 }
 
-/* Sottotitoli contenuto */
+
 .sotto_titolo_contenuto {
     color: black;
     font-size: clamp(13px, 1.8vw, 16px);
@@ -89,7 +89,7 @@ body {
     border-radius: 6px;
 }
 
-/* Contenitore centrato */
+
 .container {
     display: flex;
     justify-content: center;
@@ -97,7 +97,7 @@ body {
     min-height: 60vh;
 }
 
-/* Sezione hotel */
+
 .hotel-città {
     max-width: 900px;
     margin: 40px auto;
@@ -117,7 +117,7 @@ body {
     color: #0096c7;
 }
 
-/* Footer */
+
 .titolo_footer {
     color: black;
     font-size: clamp(10px, 1.5vw, 14px);
@@ -133,7 +133,7 @@ body {
     color: #333;
 }
 
-/* Media query per schermi piccoli */
+
 @media (max-width: 600px) {
     .contenitore {
         margin: 10px;
