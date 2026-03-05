@@ -23,20 +23,7 @@
             <a href="chi-siamo.html">Chi Siamo</a>
             <a href="lavora-con-noi.html" aria-current="page">Lavora con noi</a>
             
-            <input type="checkbox" id="login-toggle" class="login-toggle" />
-            <input type="checkbox" id="logged-toggle" class="logged-toggle" />
-            <label for="login-toggle" class="login-btn">Accedi ▾</label>
-            <div class="login-panel">
-                <form class="login-form">
-                    <label>Email <input type="email" required placeholder="tuo@esempio.it"></label>
-                    <label>Password <input type="password" required placeholder="********"></label>
-                    <div class="login-actions">
-                        <label for="logged-toggle" class="btn">Accedi</label>
-                        <a class="link" href="registrati.html">Registrati</a>
-                    </div>
-                </form>
-            </div>
-            <div class="user-badge">Accesso effettuato · <label for="logged-toggle" class="link">Esci</label></div>
+            <!-- login e user-badge rimossi -->
         </nav>
     </header>
 
@@ -62,27 +49,43 @@
             </div>
         </section>
 
-        <section class="content" style="margin-top: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">
-            <h2 class="titolo" style="margin-bottom: 20px;">Invia la tua candidatura</h2>
-            <form action="#" method="post" class="login-form">
-                <label>Nome Completo
-                    <input type="text" name="nome" required placeholder="Mario Rossi">
-                </label>
-                <label>Email
-                    <input type="email" name="email" required placeholder="mario.rossi@esempio.it">
-                </label>
-                <label>Posizione di interesse
-                    <select name="posizione" style="width: 100%; padding: 8px; border: 1px solid rgba(0,0,0,0.06); border-radius: 6px; margin-top: 6px;">
+        <section class="content candidatura-card" style="margin-top: 40px; max-width: 480px; margin-left: auto; margin-right: auto; background: linear-gradient(180deg,#fff,#faf6f2); box-shadow: 0 8px 32px rgba(255,106,0,0.08); border-radius: 18px; padding: 32px 28px;">
+            <h2 class="titolo" style="margin-bottom: 18px; color: var(--accent-dark); display: flex; align-items: center; gap: 10px; justify-content: center;">
+                <span style="font-size: 1.5em;">&#128188;</span> Invia la tua candidatura
+            </h2>
+            <form action="#" method="post" class="candidatura-form" autocomplete="on">
+                <div style="margin-bottom: 18px;">
+                    <label style="font-weight: 600; color: var(--accent-dark); display: flex; align-items: center; gap: 8px;">
+                        <span style="font-size:1.2em;">&#128100;</span> Nome Completo
+                    </label>
+                    <input type="text" name="nome" required placeholder="Mario Rossi" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #eee; margin-top: 6px; font-size: 1em;">
+                </div>
+                <div style="margin-bottom: 18px;">
+                    <label style="font-weight: 600; color: var(--accent-dark); display: flex; align-items: center; gap: 8px;">
+                        <span style="font-size:1.2em;">&#9993;</span> Email
+                    </label>
+                    <input type="email" name="email" required placeholder="mario.rossi@esempio.it" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #eee; margin-top: 6px; font-size: 1em;">
+                </div>
+                <div style="margin-bottom: 18px;">
+                    <label style="font-weight: 600; color: var(--accent-dark); display: flex; align-items: center; gap: 8px;">
+                        <span style="font-size:1.2em;">&#128188;</span> Posizione di interesse
+                    </label>
+                    <select name="posizione" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #eee; margin-top: 6px; font-size: 1em;">
                         <option value="dev">Web Developer</option>
                         <option value="social">Social Media Manager</option>
                         <option value="customer">Customer Specialist</option>
                     </select>
-                </label>
-                <label>Messaggio di presentazione
-                    <textarea name="messaggio" rows="4" style="width: 100%; padding: 8px; border: 1px solid rgba(0,0,0,0.06); border-radius: 6px; margin-top: 6px; font-family: inherit;"></textarea>
-                </label>
-                <div style="margin-top: 20px; text-align: center;">
-                    <button type="submit" class="btn" style="border: none; cursor: pointer; width: 100%;">Invia Candidatura</button>
+                </div>
+                <div style="margin-bottom: 24px;">
+                    <label style="font-weight: 600; color: var(--accent-dark); display: flex; align-items: center; gap: 8px;">
+                        <span style="font-size:1.2em;">&#9997;&#65039;</span> Messaggio di presentazione
+                    </label>
+                    <textarea name="messaggio" rows="4" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #eee; margin-top: 6px; font-size: 1em; font-family: inherit; resize: vertical; min-height: 80px;"></textarea>
+                </div>
+                <div style="margin-top: 18px; text-align: center;">
+                    <button type="submit" class="btn" style="background: linear-gradient(90deg, var(--accent), var(--accent-dark)); color: #fff; font-weight: 700; font-size: 1.1em; border: none; border-radius: 8px; padding: 14px 0; width: 100%; box-shadow: 0 4px 16px rgba(255,106,0,0.10); transition: background 0.2s; cursor: pointer; letter-spacing: 0.5px;">
+                        <span style="font-size:1.2em; vertical-align:middle;">&#128640;</span> Invia Candidatura
+                    </button>
                 </div>
             </form>
         </section>

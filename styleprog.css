@@ -58,26 +58,6 @@ body{
 .dropdown-content li a:hover{background:rgba(255,106,0,0.06);color:var(--accent-dark)}
 .dropdown:hover .dropdown-content,.dropdown:focus-within .dropdown-content{display:block;opacity:1;transform:translateY(0)}
 
-.login-toggle{display:none}
-.logged-toggle{display:none}
-.login-btn{position:absolute;right:14px;top:12px;background:transparent;border:none;color:var(--accent-dark);font-weight:700;cursor:pointer;padding:8px 12px;border-radius:6px}
-.login-btn:focus{outline:2px solid rgba(255,106,0,0.18)}
-.login-panel{position:absolute;top:48px;right:14px;display:none;min-width:300px;background:var(--card);border-radius:8px;box-shadow:0 10px 30px rgba(17,17,17,0.12);padding:12px;border:1px solid rgba(0,0,0,0.04);z-index:60}
-.login-toggle:checked + .logged-toggle + .login-btn + .login-panel{display:block}
-.logged-toggle:checked ~ .login-panel{display:none}
-.logged-toggle:checked ~ .login-btn{display:none}
-.logged-toggle:checked ~ .user-badge{display:flex}
-.user-badge{display:none;position:absolute;top:12px;right:14px;align-items:center;gap:10px;color:var(--accent-dark);font-weight:700}
-.login-form label{display:block;font-size:13px;color:var(--muted);margin:8px 0}
-.login-form input{width:100%;padding:8px;border:1px solid rgba(0,0,0,0.06);border-radius:6px;margin-top:6px}
-.login-actions{display:flex;gap:8px;justify-content:space-between;align-items:center;margin-top:10px}
-.login-actions .btn{padding:8px 10px}
-.login-actions .link{font-size:13px;color:var(--accent-dark);text-decoration:none}
-
-@media (max-width:560px){
-    .login-btn{right:8px;top:8px;padding:6px 10px}
-    .login-panel{right:8px;left:8px;min-width:unset}
-}
 
 .dropdown .flag{width:22px}
 
@@ -168,45 +148,6 @@ body{
     .hero-inner{justify-content:flex-start;padding:20px}
 }
 
-.login-toggle, .logged-toggle {
-    display: none;
-}
-
-.login-wrapper {
-    position: absolute;
-    right: 20px;
-    top: 15px;
-    z-index: 1000;
-}
-
-.login-btn {
-    cursor: pointer;
-    color: var(--accent-dark);
-    font-weight: 700;
-    padding: 8px 15px;
-    border: 1px solid var(--accent);
-    border-radius: 6px;
-    display: inline-block;
-    background: transparent;
-    transition: all 0.2s;
-}
-
-.login-btn:hover {
-    background: rgba(255, 106, 0, 0.05);
-}
-
-.login-panel {
-    display: none;
-    position: absolute;
-    right: 0;
-    top: 45px;
-    width: 280px;
-    background: white;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-    border: 1px solid rgba(0,0,0,0.1);
-}
 
 /* extra responsive tweaks for small viewports */
 @media (max-width:480px){
@@ -234,42 +175,3 @@ body{
 }
 
 
-.login-toggle:checked ~ .login-panel {
-    display: block;
-    animation: fadeIn 0.2s ease-out;
-}
-
-.logged-toggle:checked ~ .login-btn,
-.logged-toggle:checked ~ .login-panel {
-    display: none !important;
-}
-
-.user-badge {
-    display: none;
-    align-items: center;
-    gap: 12px;
-    background: white;
-    padding: 8px 15px;
-    border-radius: 25px;
-    border: 1px solid var(--accent);
-    color: var(--accent-dark);
-    font-weight: 600;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-
-.logged-toggle:checked ~ .user-badge {
-    display: flex;
-}
-
-.login-form label { display: block; margin-bottom: 12px; font-size: 14px; color: var(--muted); }
-.login-form input { width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #eee; border-radius: 6px; background: #f9f9f9; }
-.login-form input:focus { border-color: var(--accent); outline: none; background: #fff; }
-
-.login-actions { display: flex; justify-content: space-between; align-items: center; margin-top: 15px; }
-.link-logout { cursor: pointer; text-decoration: underline; color: var(--accent); font-size: 14px; }
-.btn-link { font-size: 13px; color: var(--muted); text-decoration: none; }
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
