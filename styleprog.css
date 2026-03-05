@@ -1,3 +1,10 @@
+.img-secondario--wellington {
+    height: 180px !important;
+    width: 100% !important;
+    object-fit: cover !important;
+    aspect-ratio: 16/9;
+    display: block;
+}
 
 :root{
     --bg:#f7f6f4;
