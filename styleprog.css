@@ -147,6 +147,16 @@ body{
 
 .flex{display:flex; gap:12px; align-items:center}
 
+.hotel_hover{
+    color: 0.2s ease;
+    font-weight: 0.2s ease;
+}
+.hotel_hover:hover{
+    font-weight: bolder;
+    color:#FF7800 ;
+    text-decoration: solid;
+}
+
 @media (max-width:800px){
     .container{margin:12px 14px; padding:14px}
     .titolo{font-size:22px}
