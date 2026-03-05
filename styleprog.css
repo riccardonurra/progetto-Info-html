@@ -1,15 +1,14 @@
-/* Theme variables and reset */
+
 :root{
     --bg:#f7f6f4;
     --card:#ffffff;
     --text:#222222;
     --muted:#666666;
-    --accent:#ff6a00; /* primary orange */
+    --accent:#ff6a00; 
     --accent-dark:#e65500;
     --max-width:1100px;
 }
 
-/* Smooth scroll for in-page navigation */
 html{scroll-behavior:smooth}
 
 *{box-sizing:border-box;margin:0;padding:0}
@@ -32,7 +31,6 @@ body{
     box-shadow:0 6px 18px rgba(17,17,17,0.06);
 }
 
-/* Hero */
 .hero{width:100%;height:420px;background-image:url('immagini/homepage_photo_1.png');background-size:cover;background-position:center;border-radius:8px;margin:18px auto;position:relative;overflow:hidden}
 .hero::after{display:none}
 .hero-inner{position:relative;z-index:2;max-width:var(--max-width);margin:0 auto;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;color:#000;padding:48px 24px 24px;text-align:center}
@@ -43,17 +41,14 @@ body{
 .hero .btn:hover{background:#ffe9db}
 .hero .link{color:#fff;border:1px solid rgba(255,255,255,0.18);padding:8px 12px;border-radius:8px}
 
-/* Adjust container spacing when hero present */
 .container{margin-top:8px}
 
-/* Header and nav */
 .site-header{background:linear-gradient(90deg, rgba(255,106,0,0.06), rgba(255,106,0,0.02)); padding:18px 0; border-bottom:1px solid rgba(0,0,0,0.06); position:relative}
 .main-nav{display:flex; gap:14px; justify-content:center; align-items:center; margin-bottom:10px}
 .main-nav a{color:var(--accent-dark); text-decoration:none; font-weight:600; padding:8px 12px; border-radius:6px}
 .main-nav a:hover{background:rgba(255,106,0,0.12)}
 .main-nav a[aria-current="page"]{background:var(--accent); color:white}
 
-/* Dropdown (Mete) */
 .dropdown{position:absolute; left:14px; top:12px; z-index:50}
 .dropbtn{background:transparent;border:none;color:var(--accent-dark);font-weight:700;cursor:pointer;padding:8px 12px;border-radius:6px}
 .dropbtn:focus{outline:2px solid rgba(255,106,0,0.18)}
@@ -63,7 +58,6 @@ body{
 .dropdown-content li a:hover{background:rgba(255,106,0,0.06);color:var(--accent-dark)}
 .dropdown:hover .dropdown-content,.dropdown:focus-within .dropdown-content{display:block;opacity:1;transform:translateY(0)}
 
-/* Login (CSS-only toggle) */
 .login-toggle{display:none}
 .logged-toggle{display:none}
 .login-btn{position:absolute;right:14px;top:12px;background:transparent;border:none;color:var(--accent-dark);font-weight:700;cursor:pointer;padding:8px 12px;border-radius:6px}
@@ -85,7 +79,6 @@ body{
     .login-panel{right:8px;left:8px;min-width:unset}
 }
 
-/* make flags inside dropdown slightly larger */
 .dropdown .flag{width:22px}
 
 @media (max-width:560px){
@@ -95,19 +88,16 @@ body{
 
 .titolo{font-size:30px; text-align:center; color:var(--text); margin:6px 0}
 
-/* Images */
-.img_primario{width:100%; height:auto; max-height:420px; object-fit:cover; border-radius:8px}
+.img_primario{width:100%; height:auto; max-height:420px; object-fit:cover; border-radius:8px;}
 .img_secondario{width:100%; height:auto; object-fit:cover; border-radius:6px}
 .img_operatore{width:100%; max-width:320px; height:auto; border-radius:6px; border:1px solid rgba(0,0,0,0.06)}
 
-/* Content */
 .content, .paragrafi{margin:16px 0; color:var(--muted); line-height:1.6}
 .content{padding:14px; border:1px solid rgba(0,0,0,0.04); background:linear-gradient(180deg,#fff,#fafafa); border-radius:8px}
 
 .titolo_secondario{font-family: 'Georgia', 'Times New Roman', serif; font-size:26px; margin-top:12px; color:var(--text); text-transform:capitalize; letter-spacing:1px; font-weight:700; text-align:center; position:relative; padding-bottom:18px}
 .titolo_secondario::after{content:"";position:absolute;left:50%;transform:translateX(-50%);bottom:6px;width:96px;height:6px;background:linear-gradient(90deg,var(--accent),var(--accent-dark));border-radius:4px;box-shadow:0 6px 16px rgba(230,90,20,0.14)}
 
-/* Proposte: cards artistiche */
 .proposte-grid{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;margin-top:18px}
 .proposta-card{background:linear-gradient(180deg,rgba(255,255,255,0.98),rgba(255,250,245,0.98));border-radius:12px;padding:18px;box-shadow:0 10px 24px rgba(18,18,18,0.06);width:280px;min-height:140px;display:flex;flex-direction:column;justify-content:flex-start;align-items:flex-start;transition:transform .22s ease,box-shadow .22s ease;text-decoration:none;color:inherit}
 .proposta-card:hover{transform:translateY(-6px);box-shadow:0 18px 34px rgba(18,18,18,0.12);text-decoration:none}
@@ -135,7 +125,6 @@ body{
 .sottotitolo::before,.sottotitolo::after{content:"";display:inline-block;width:40px;height:2px;background:linear-gradient(90deg,var(--accent),var(--accent-dark));vertical-align:middle;margin:0 10px;border-radius:2px;opacity:0.9}
 .class_operatore{font-size:15px; color:var(--text)}
 
-/* Destinations as cards */
 .mete_viaggi ul{list-style:none; padding:0; margin:0}
 .mete_viaggi .grid-top{display:grid; grid-template-columns:repeat(3, 1fr); gap:18px; padding:0; margin:0}
 .mete_viaggi .grid-bottom{display:flex; gap:18px; justify-content:center; padding:0; margin:18px 0 0 0}
@@ -148,17 +137,14 @@ body{
 .flag{width:28px; height:auto; display:inline-block; border-radius:4px; box-shadow:0 1px 3px rgba(0,0,0,0.06)}
 .mete_viaggi li:hover{transform:translateY(-4px); transition:transform .18s ease}
 
-/* Buttons and links */
 .link, .link_footer{color:var(--accent); text-decoration:none; font-weight:600}
 .btn{display:inline-block; background:var(--accent); color:#fff; padding:10px 14px; border-radius:8px; text-decoration:none}
 .btn:hover{background:var(--accent-dark)}
 
-/* Footer */
 .site-footer{background:linear-gradient(90deg, rgba(255,106,0,0.04), rgba(0,0,0,0.02)); padding:18px; margin-top:18px; border-top:4px solid var(--accent); border-radius:0 0 10px 10px}
 .titolo_footer{font-size:13px; color:var(--muted)}
 .content_footer{font-size:13px; color:var(--muted)}
 
-/* Utility */
 .flex{display:flex; gap:12px; align-items:center}
 
 @media (max-width:800px){
@@ -171,14 +157,11 @@ body{
     .hero-sub{font-size:14px}
     .hero-inner{justify-content:flex-start;padding:20px}
 }
-/* --- FIX DEFINITIVO SISTEMA ACCEDI --- */
 
-/* Nascondiamo gli interruttori checkbox */
 .login-toggle, .logged-toggle {
     display: none;
 }
 
-/* Contenitore posizionato in alto a destra nel header */
 .login-wrapper {
     position: absolute;
     right: 20px;
@@ -186,7 +169,6 @@ body{
     z-index: 1000;
 }
 
-/* Bottone Accedi */
 .login-btn {
     cursor: pointer;
     color: var(--accent-dark);
@@ -203,7 +185,6 @@ body{
     background: rgba(255, 106, 0, 0.05);
 }
 
-/* Il pannello che compare al click */
 .login-panel {
     display: none;
     position: absolute;
@@ -217,21 +198,42 @@ body{
     border: 1px solid rgba(0,0,0,0.1);
 }
 
-/* --- LOGICA DI VISUALIZZAZIONE --- */
+/* extra responsive tweaks for small viewports */
+@media (max-width:480px){
+    .main-nav{flex-direction:column;align-items:stretch;gap:0;padding:0}
+    .main-nav a{padding:10px 12px;text-align:center;width:100%}
+    .hero{height:180px}
+    .hero-title{font-size:20px}
+    .hero-sub{font-size:13px}
+    .hero-inner{padding:12px}
+    .container{margin:8px;padding:10px}
+    .titolo{font-size:20px}
+    .img_primario{max-height:180px}
+    .proposte-grid,.date-grid{flex-direction:column;align-items:stretch}
+    .proposta-card,.date-card{width:100%;min-height:auto}
+    .mete_viaggi .grid-top{grid-template-columns:1fr}
+    .mete_viaggi .img_secondario{height:auto}
+    .sottotitolo{font-size:16px;padding:6px 12px;max-width:90%}
+}
 
-/* Mostra pannello quando il toggle è attivo */
+@media (max-width:360px){
+    .hero{height:140px}
+    .hero-title{font-size:18px}
+    .hero-sub{font-size:12px}
+    .main-nav a{font-size:14px}
+}
+
+
 .login-toggle:checked ~ .login-panel {
     display: block;
     animation: fadeIn 0.2s ease-out;
 }
 
-/* Nasconde tasto e pannello se loggato */
 .logged-toggle:checked ~ .login-btn,
 .logged-toggle:checked ~ .login-panel {
     display: none !important;
 }
 
-/* Badge utente (mostrato solo se loggato) */
 .user-badge {
     display: none;
     align-items: center;
@@ -249,7 +251,6 @@ body{
     display: flex;
 }
 
-/* Dettagli estetici del form */
 .login-form label { display: block; margin-bottom: 12px; font-size: 14px; color: var(--muted); }
 .login-form input { width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #eee; border-radius: 6px; background: #f9f9f9; }
 .login-form input:focus { border-color: var(--accent); outline: none; background: #fff; }

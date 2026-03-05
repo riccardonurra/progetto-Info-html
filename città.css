@@ -1,129 +1,114 @@
-body{
+/* Layout generale */
+body {
     margin: 0;
     min-height: 35%;
     display: flex;
     flex-direction: column;
+    font-family: 'Times New Roman', Times, serif;
 }
-.titolo{
+
+/* Titoli */
+.titolo {
     color: green;
-    font-size: 25px;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: normal;
-    padding-top: 3px;
-    padding-left: 1.5px;
-    padding-right: 1.5px;
-    padding-bottom: 3px;
+    font-size: clamp(20px, 3vw, 30px);
     padding: 10px;
     text-align: center;
 }
 
-.sotto_titolo{
+.sotto_titolo {
     color: black;
-    font-size: 20px;
-    font-family: 'Times New Roman', Times, serif;
+    font-size: clamp(16px, 2.5vw, 22px);
     font-style: oblique;
-    padding-top: 3px;
-    padding-left: 10px;
-    padding-right: 1.5px;
-    padding-bottom: 3px;
+    padding: 5px 10px;
     text-align: center;
 }
 
-.contenuto{
-    margin-top: 10px;
-    margin-bottom: 10px;
+/* Contenuti */
+.contenuto {
+    margin: 10px 0;
     padding: 10px;
-    padding-left: 0px;
-    padding-top: 0px;
     border-radius: 4px;
-    font-size: 15px;
+    font-size: clamp(14px, 2vw, 17px);
     color: black;
-    font-style: normal;
-    text-align: left;    
+    text-align: left;
 }
 
-
-.contenuto h3{
+.contenuto h3 {
     margin-top: 0;
     color: #0096c7;
 }
 
-.grande_contenuto{
+.grande_contenuto {
     border-left: 4px solid lightblue;
     padding-left: 10px;
     border-radius: 4px;
 }
-.contenitore{
-    margin-left: 20px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    
+
+.contenitore {
+    margin: 10px 20px;
     padding: 10px;
 }
 
-.sotto_titolo_contenuto{
+/* Sottotitoli contenuto */
+.sotto_titolo_contenuto {
     color: black;
-    font-size: 15px;
+    font-size: clamp(13px, 1.8vw, 16px);
     font-style: oblique;
     padding-left: 10px;
-    padding: 1.5px;
-    text-align: left;
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 
-.titolo_contenuto{
+.titolo_contenuto {
     color: green;
-    font-size: 17px;
-    font-style: normal;
-    padding-top: 2.5px;
-    padding-left: 5px;
-    padding-right: 1.5px;
-    padding-bottom: 2.5px;
-
+    font-size: clamp(15px, 2vw, 19px);
+    padding: 3px 5px;
 }
 
-.img_secondario{
-    border: 1px solid black;
-    width: 70%;
-    height: auto;
-    max-height: 300px;
-    max-width: 700px;
-}
-
-.immagine{
+.img_primario{
     display: block;
     width: 100%;
-    height: auto;
-    max-height: 300px;
-    max-width: 700px;
+    aspect-ratio: 16/9;
+    max-width: calc(100% - 2rem);
+    box-sizing: border-box;
+    height: 56.25%;
+    object-fit: contain;
+    margin: 1rem auto;
+    border-radius: 6px;
 }
-
-.container { 
-    display: flex; justify-content: center;
-    align-items: center; 
-    height: 100vh;
-} 
-
+.img_secondario,
+.immagine,
 .center-img {
-  display: block;
-  margin: 0 auto;
-  max-width: 600px;
-  
+    display: block;
+    width: 100%;
+    max-width: calc(100% - 2rem);
+    box-sizing: border-box;
+    height: auto; 
+    
+    object-fit: contain;
+    margin: 1rem auto;
+    border-radius: 6px;
 }
 
-.hotel-città{
-    max-width: 800px;
+/* Contenitore centrato */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+}
+
+/* Sezione hotel */
+.hotel-città {
+    max-width: 900px;
     margin: 40px auto;
     padding: 20px;
-    font-family: 'Times New Roman', Times, serif;
 }
-
 
 .hotel {
     margin-bottom: 25px;
     padding: 15px;
     border-left: 4px solid lightblue;
-    font-size: 15px;
+    font-size: clamp(14px, 2vw, 17px);
     border-radius: 4px;
 }
 
@@ -132,26 +117,63 @@ body{
     color: #0096c7;
 }
 
-
-.titolo_footer{
-    place-content: bottom;
+/* Footer */
+.titolo_footer {
     color: black;
-    font-size: 12px;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: normal;
+    font-size: clamp(10px, 1.5vw, 14px);
     text-align: left;
-    margin-top: 1px;
-    margin-bottom: 1px;
+    margin: 2px 0;
 }
 
-.content_footer{
-    place-content: bottom;
-    padding: 0%;
-    margin-top: 1px;
-    margin-bottom: 1px;
-    margin-left: 15px;
-    margin-right: 15px;
-    font-size: 9px;
+.content_footer {
+    padding: 0;
+    margin: 2px 15px;
+    font-size: clamp(8px, 1.2vw, 12px);
     text-align: left;
     color: #333;
+}
+
+/* Media query per schermi piccoli */
+@media (max-width: 600px) {
+    .contenitore {
+        margin: 10px;
+    }
+
+    .hotel-città {
+        padding: 10px;
+    }
+
+    .hotel {
+        padding: 10px;
+    }
+}
+
+.link_hotel{
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+    color: #333;
+    text-decoration: none !important;
+
+}
+a.link_hotel{
+    text-decoration: none;
+}
+@media (max-width: 600px) {
+    .immagine {
+        max-width: calc(100% - 2rem);
+        border-radius: 4px;
+    }
+    .img_primario{
+        width: 100%;
+        height: 56.25%;
+        max-width: calc(100% - 2rem);
+        border-radius: 4px;
+
+    }
 }
