@@ -13,11 +13,11 @@
             <div class="dropdown">
                 <button class="dropbtn" aria-haspopup="true" aria-expanded="false">METE ▾</button>
                 <ul class="dropdown-content" aria-label="Elenco mete">
-                    <li><a href="roma.html"><img src="immagini/flags/Flag_of_Italy.svg.webp" class="flag" alt="Italia">Roma</a></li>
-                    <li><a href="parigi.html"><img src="immagini/flags/france.png" class="flag" alt="Francia">Parigi</a></li>
-                    <li><a href="newyork.html"><img src="immagini/flags/us.png" class="flag" alt="USA">New York</a></li>
-                    <li><a href="tokyo.html"><img src="immagini/flags/japan.png" class="flag" alt="Giappone">Tokyo</a></li>
-                    <li><a href="wellington.html"><img src="immagini/flags/new_zealand.png" class="flag" alt="Nuova Zelanda">Wellington</a></li>
+                    <li><a href="roma.html"><img src="immagini/flags/Flag_of_Italy.svg.webp" class="flag" alt="Italia" loading="lazy">Roma</a></li>
+                    <li><a href="parigi.html"><img src="immagini/flags/france.png" class="flag" alt="Francia" loading="lazy">Parigi</a></li>
+                    <li><a href="newyork.html"><img src="immagini/flags/us.png" class="flag" alt="USA" loading="lazy">New York</a></li>
+                    <li><a href="tokyo.html"><img src="immagini/flags/japan.png" class="flag" alt="Giappone" loading="lazy">Tokyo</a></li>
+                    <li><a href="wellington.html"><img src="immagini/flags/new_zealand.png" class="flag" alt="Nuova Zelanda" loading="lazy">Wellington</a></li>
                 </ul>
             </div>
             <a href="chi-siamo.html">Chi Siamo</a>
@@ -53,7 +53,7 @@
             <h2 class="titolo" style="margin-bottom: 18px; color: var(--accent-dark); display: flex; align-items: center; gap: 10px; justify-content: center;">
                 <span style="font-size: 1.5em;">&#128188;</span> Invia la tua candidatura
             </h2>
-            <form action="#" method="post" class="candidatura-form" autocomplete="on">
+            <form action="#" method="post" class="candidatura-form" autocomplete="on" enctype="multipart/form-data" id="candidaturaForm">
                 <div style="margin-bottom: 18px;">
                     <label style="font-weight: 600; color: var(--accent-dark); display: flex; align-items: center; gap: 8px;">
                         <span style="font-size:1.2em;">&#128100;</span> Nome Completo
@@ -82,12 +82,58 @@
                     </label>
                     <textarea name="messaggio" rows="4" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #eee; margin-top: 6px; font-size: 1em; font-family: inherit; resize: vertical; min-height: 80px;"></textarea>
                 </div>
+                <div style="margin-bottom: 18px;">
+                    <label style="font-weight: 600; color: var(--accent-dark); display: flex; align-items: center; gap: 8px;">
+                        <span style="font-size:1.2em;">&#128206;</span> Carica il tuo CV (PDF)
+                    </label>
+                    <input type="file" name="cv" id="cv" accept=".pdf" required style="width: 100%; padding: 8px; border-radius: 8px; border: 1px solid #eee; margin-top: 6px; font-size: 1em; background: #fafafa;">
+                </div>
                 <div style="margin-top: 18px; text-align: center;">
                     <button type="submit" class="btn" style="background: linear-gradient(90deg, var(--accent), var(--accent-dark)); color: #fff; font-weight: 700; font-size: 1.1em; border: none; border-radius: 8px; padding: 14px 0; width: 100%; box-shadow: 0 4px 16px rgba(255,106,0,0.10); transition: background 0.2s; cursor: pointer; letter-spacing: 0.5px;">
                         <span style="font-size:1.2em; vertical-align:middle;">&#128640;</span> Invia Candidatura
                     </button>
                 </div>
+                <div id="formFeedback" style="margin-top:18px; text-align:center; font-weight:600; display:none;"></div>
             </form>
+            <script>
+            document.getElementById('candidaturaForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                var form = this;
+                var feedback = document.getElementById('formFeedback');
+                feedback.style.display = 'none';
+                
+                var email = form.email.value.trim();
+                var messaggio = form.messaggio.value.trim();
+                var cv = form.cv.files[0];
+                var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailPattern.test(email)) {
+                    feedback.style.display = 'block';
+                    feedback.style.color = '#e65500';
+                    feedback.textContent = 'Inserisci un indirizzo email valido.';
+                    form.email.focus();
+                    return;
+                }
+                if (messaggio.length < 20) {
+                    feedback.style.display = 'block';
+                    feedback.style.color = '#e65500';
+                    feedback.textContent = 'Il messaggio deve contenere almeno 20 caratteri.';
+                    form.messaggio.focus();
+                    return;
+                }
+                if (!cv || cv.type !== 'application/pdf') {
+                    feedback.style.display = 'block';
+                    feedback.style.color = '#e65500';
+                    feedback.textContent = 'Carica un file PDF valido come CV.';
+                    form.cv.focus();
+                    return;
+                }
+                
+                feedback.style.display = 'block';
+                feedback.style.color = '#1cae4e';
+                feedback.textContent = 'Candidatura inviata con successo! Grazie per averci contattato.';
+                form.reset();
+            });
+            </script>
         </section>
     </main>
 
